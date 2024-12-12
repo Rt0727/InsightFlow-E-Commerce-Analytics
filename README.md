@@ -37,6 +37,8 @@ Clone this repository to your local machine and navigate into the directory:
 ```bash
 git clone https://github.com/Rt0727/InsightFlow-E-Commerce-Analytics.git
 cd InsightFlow-E-Commerce-Analytics
+git clone https://github.com/Rt0727/InsightFlow-E-Commerce-Analytics.git
+cd InsightFlow-E-Commerce-Analytics
 ```
 
 ### 2. Configure Terraform Variables
