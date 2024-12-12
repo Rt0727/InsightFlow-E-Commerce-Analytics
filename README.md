@@ -1,37 +1,42 @@
 # InsightFlow: E-Commerce Analytics
 
 ## Overview
-This repository provides an automated setup for an e-commerce analytics dashboard powered by MySQL, Terraform, and Docker. It features a seamless integration between a MySQL database and a Flask web application to offer insightful analytics for e-commerce sales. The setup uses Terraform for Infrastructure as Code (IaC) to manage cloud resources and Docker for containerizing the application.
+This repository provides an automated setup for an e-commerce analytics dashboard powered by MySQL, Terraform, and Docker. It features a seamless integration between a MySQL database and a Flask web application to offer insightful analytics for e-commerce sales. The Python components handle database operations, core analytics, and web interactions, making it a robust solution for e-commerce data analysis.
 
 ## Features
 - **MySQL Database**: Stores sales, product, and customer data.
 - **Flask Web Application**: Provides an analytics dashboard for real-time insights into e-commerce metrics.
+- **Python Modules**: Includes logic for database operations and analytics computations.
 - **Infrastructure as Code**: Automates the setup of EC2 instances and RDS MySQL databases using Terraform.
 - **Data Refresh**: Includes a script to regularly refresh e-commerce data for accurate reporting.
 - **Backup Automation**: Automated script to back up MySQL databases for disaster recovery.
 - **Containerized Environment**: Docker ensures consistent environments for both development and production setups.
 
-## Technologies Used
-- **Database**: MySQL
-- **Containerization**: Docker, Docker Compose
-- **IaC**: Terraform
-- **Web Framework**: Flask
-- **Automation**: Bash Scripts
+## 🛠️ Technologies Used
+
+| Technology       | Purpose                                           |
+|-------------------|---------------------------------------------------|
+| **MySQL**        | Database for storing e-commerce data              |
+| **Docker**       | Containerization for app and database             |
+| **Terraform**    | Infrastructure provisioning for AWS resources     |
+| **Flask**        | Web application framework for the dashboard       |
+| **Python**       | Backend logic for analytics and database handling |
+| **Bash Scripts** | Automation of routine tasks                       |
 
 ## Prerequisites
 - Install [Docker](https://www.docker.com/)
 - Install [Terraform](https://www.terraform.io/)
 - Install [Git](https://git-scm.com/)
 - Basic knowledge of Bash and Python
-- AWS Account for deploying infrastructure (Optional, if using AWS EC2/RDS)
+- AWS Account for deploying infrastructure (optional for local setup)
 
 ## Setup Instructions
 
 ### 1. Clone the Repository
 Clone this repository to your local machine and navigate into the directory:
 ```bash
-git clone https://github.com/yourusername/ecommerce-analytics-dashboard-setup.git
-cd ecommerce-analytics-dashboard-setup
+git clone https://github.com/Rt0727/InsightFlow-E-Commerce-Analytics.git
+cd InsightFlow-E-Commerce-Analytics
 ```
 
 ### 2. Configure Terraform Variables
@@ -85,25 +90,25 @@ This script creates a backup of the MySQL database to ensure data safety.
 ```
 This script refreshes the sales data in the MySQL database for up-to-date insights.
 
-## Project Structure
+## Python Codebase
+### Directory Structure
 ```plaintext
 ecommerce-analytics-dashboard-setup/
 │
-├── terraform/
-│   ├── main.tf                    # Defines EC2 and RDS MySQL resources
-│   ├── variables.tf               # Contains variables for EC2, RDS setup
-│   └── outputs.tf                 # Outputs RDS endpoint and EC2 instance details
+├── python/
+│   ├── app.py                    # Flask application for analytics
+│   ├── database.py               # Handles MySQL database operations
+│   ├── analytics.py              # Core logic for analytics and insights
+│   └── tests/
+│       ├── test_app.py           # Unit tests for Flask app
+│       ├── test_database.py      # Unit tests for database operations
+│       └── test_analytics.py     # Unit tests for analytics logic
 │
-├── docker/
-│   ├── Dockerfile                 # Dockerfile for Flask web app
-│   └── docker-compose.yml         # Docker Compose file for local setup
-│
-├── scripts/
-│   ├── backup.sh                  # Backup script for MySQL database
-│   └── data_refresh.sh            # Sales data refresh script
-│
-├── README.md                      # Documentation
-└── .gitignore                     # Git ignore file
+├── terraform/                    # Infrastructure setup with Terraform
+├── docker/                       # Docker and Docker Compose files
+├── scripts/                      # Automation scripts for backup and refresh
+├── README.md                     # Project documentation
+└── .gitignore                    # Git ignore file
 ```
 
 ## Troubleshooting
@@ -127,5 +132,4 @@ Access logs for debugging:
 
 For any questions or issues, feel free to reach out at `rt07mahifan@gmail.com`.
 
---- 
-
+```
