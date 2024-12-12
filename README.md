@@ -11,12 +11,15 @@ This repository provides an automated setup for an e-commerce analytics dashboar
 - **Backup Automation**: Automated script to back up MySQL databases for disaster recovery.
 - **Containerized Environment**: Docker ensures consistent environments for both development and production setups.
 
-## Technologies Used
-- **Database**: MySQL
-- **Containerization**: Docker, Docker Compose
-- **IaC**: Terraform
-- **Web Framework**: Flask
-- **Automation**: Bash Scripts
+## 🛠️ Technologies Used
+
+| Technology        | Purpose                               |
+|-------------------|---------------------------------------|
+| **PostgreSQL**    | Database for library data            |
+| **Docker**        | Containerization                     |
+| **Terraform**     | Infrastructure provisioning          |
+| **Bash Scripts**  | Automation of routine tasks          |
+| **Python**        | Core application logic for the CLI   |
 
 ## Prerequisites
 - Install [Docker](https://www.docker.com/)
